@@ -359,7 +359,7 @@ body,
 
 </style> <style>
 #wrapper { width: 100vw; height: 75vw; }
-@media (min-aspect-ratio: 480/360) {
+@media (min-aspect-ratio: 1080/1920) {
 #wrapper { height: 100vh; width: 133.33333333333331vh; }
 }
 #loading-progress {
@@ -706,8 +706,8 @@ class VideoProvider {
       this._singleSetup = navigator.mediaDevices.getUserMedia({
         audio: false,
         video: {
-          width: { min: width, ideal: (480 * width) / height },
-          height: { min: height, ideal: 480 }
+          width: { min: width, ideal: (1080 * width) / height },
+          height: { min: height, ideal: 1080 }
         }
       })
       requestStack.push(streamPromise)
@@ -1409,8 +1409,8 @@ window.download = (blob, name = 'download') => {
 </script> <script>
 const GENERATED = 1633743932154
 const initOptions = {
-	"width": 480,
-	"height": 360,
+	"width": 1080,
+	"height": 1920,
 	"stretchStage": false,
 	"fps": 30,
 	"turbo": false,
